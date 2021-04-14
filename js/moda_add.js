@@ -1,3 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // console.log("modal");
+    
+    cartQuantityElem.addEventListener('click', onShowModalCart);
+
+    function onShowModalCart() {
+        console.log("modal-cart");
+    }
 })
