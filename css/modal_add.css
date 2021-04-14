@@ -1,0 +1,74 @@
+#modal_add {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 2px #cccccc;
+    border-radius: 10px;
+}
+.modal-add-header {
+    display: flex;
+    color: var(--secondary);
+    background-color: var(--primary);
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 0;
+}
+.modal-add-header h3 {margin-left: 10px;}
+.modal-add-header i {margin-right: 10px; font-size: 1.3rem !important;}
+.modal-add-body {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: var(--secondary);
+    font-weight: 600;
+}
+.modal-add-body > * {margin: 10px 0;}
+.body-info {
+    text-align: center;
+}
+.form {text-align: center}
+.form input {
+    width: 30%;
+    padding: 3px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: solid 2px var(--primary);
+    text-align: center;
+    margin: 0 5px;
+}
+.modal-add-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.modal-add-actions button {
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    border: solid 2px var(--primary);
+    background-color: #ffffff;
+    color: var(--secondary);
+    /* box-shadow: 0 0 1px 1px var(--primary); */
+}
+.selected {
+    background-color: var(--primary) !important;
+    border: solid 2px var(--secondary) !important;
+    font-weight: 600;
+    /* color:  !important; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

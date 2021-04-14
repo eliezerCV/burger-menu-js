@@ -1,5 +1,6 @@
 #menu_top .container-menu {
     width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,6 +8,7 @@
     height: 50px;
     color: var(--secondary);
     font-weight: 600;
+    z-index: 1;
 }
 #menu_top .logo {margin-left: 1rem;}
 #menu_top .cart-logo {margin-right: 1rem;}

@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/menu_top.css">
     <link rel="stylesheet" href="css/menu_burger.css">
+    <link rel="stylesheet" href="css/modal_add.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 </head>
 <body>
+    <div class="mask" id="mask"></div>
+
     <section id="menu_top">
         <div class="container-menu">
             <div class="logo">
@@ -35,7 +38,29 @@
     </section>
 
     <section id="modal_add">
-
+        <div class="container">
+            <div class="modal-add-header">
+                <h3>Att to cart</h3>
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="modal-add-body">
+                <div class="body-info">
+                    <span id="burger_name">Classic</span>
+                </div>
+                <div class="form">
+                    <i class="fas fa-minus"></i>
+                    <input type="number" id="quantity" value="1">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="total">
+                    <span id="burger_price_total" >$3.15</span>
+                </div>
+            </div>
+            <div class="modal-add-actions">
+                <button>Add to cart</button>
+                <button class="selected">Buy now</button>
+            </div>
+        </div>
     </section>
 
     <section id="modal_cart">
@@ -47,3 +72,21 @@
     <script src="js/menu_burgers.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,10 @@
 
-function onAddProdToCart(id) {    
-    console.log("product added to cart " + id);
+function onAddProdToCart(index) {    
+    showModalAdd(index);
 }
 
 function loadProducts() {
-    burgers.forEach(prod => {
+    burgers.forEach((prod, i) => {
         burgersListElem.innerHTML += `
         <div class="burger">
             <div class="burger-img">
@@ -15,7 +15,7 @@ function loadProducts() {
                 <span>${prod.price}</span>
             </div>
             <div class="actions">
-                <i onClick="onAddProdToCart(${prod.id})" class="fas fa-cart-plus"></i>
+                <i onClick="onAddProdToCart(${i})" class="fas fa-cart-plus"></i>
             </div>
         </div>`;
     });
