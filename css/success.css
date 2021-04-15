@@ -1,0 +1,59 @@
+#modal_order_recived {
+    display: block;
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px #cccccc;
+    z-index: 2;
+}
+.success-header {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 10px 10px 0 0;
+}
+.success-body {
+    padding: 10px;
+    text-align: center;
+    color: var(--secondary);
+}
+.success-body span {
+    font-size: 1.2rem;
+}
+.success-body p {
+    margin-top: 10px;
+}
+.success-action {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.success-action button {
+    width: 20%;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    border: solid 1px var(--secondary);
+    background-color: var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #ccc;
+}
+.success-action button:hover {cursor: pointer;}
+
+
+
+
+
+
+
+
+
+
+
+

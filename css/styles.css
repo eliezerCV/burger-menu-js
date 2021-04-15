@@ -19,7 +19,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 .mask {
-    display: none;
+    display: block;
     position: fixed;
     width: 100%;
     height: 100%;

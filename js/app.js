@@ -16,6 +16,7 @@ var btnAddToCart = document.querySelector("#btn_add_cart");
 var btnShowCart = document.querySelector("#cart_logo");
 var btnDeleteAllFromCart = document.querySelector("#delete_all_cart");
 var btnCloseCart = document.querySelector("#btn_close_cart");
+var btnOkSuccess = document.querySelector("#btn_ok_success");
 
 var totalCartElem = document.querySelector("#total_cart");
 var noItemsInCartElem = document.querySelector("#no_items_cart");
