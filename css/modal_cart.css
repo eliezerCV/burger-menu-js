@@ -1,13 +1,22 @@
 #modal_cart {
     position: fixed;
     top: 50px;
-    left: 20%;
+    left: 120%;
     width: 80%;
     background-color: #ffffff;
     box-shadow: -1px 1px 2px 2px #cccccc;
     max-height: 90%;
     overflow: scroll;
     overflow: visible;
+    z-index: 2;
+    transition: all ease 0.5s;
+}
+.no-items-cart {
+    display: none;
+    margin-top: 20px;
+    color: var(--secondary);
+    font-weight: 600;
+    text-align: center;
 }
 .cart-header {
     width: 100%;

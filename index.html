@@ -68,19 +68,23 @@
         <div class="cart-header">
             <i id="btn_close_cart" class="fas fa-arrow-right modal-close-cart"></i>
             <span>Cart</span>
-            <i title="Elimina todos los elementos del carrito" class="fas fa-trash-alt"></i>
+            <i title="Elimina todos los elementos del carrito" id="delete_all_cart" class="fas fa-trash-alt"></i>
         </div>
         <div class="container-modal-cart" id="list_orders_modal_cart"></div>
+        <div class="no-items-cart" id="no_items_cart">
+            <span>no items in cart</span>
+        </div>
         <div class="total-orders">
             <div class="total-info">
                 <p>Total: </p>
-                <span>$12.55</span>
+                <span id="total_cart"></span>
             </div>
             <button>Save Order</button>
         </div>
     </section>
 
     <script src="js/app.js"></script>
+    <script src="js/menu_top.js"></script>
     <script src="js/menu_burgers.js"></script>
     <script src="js/modal_add.js"></script>
     <script src="js/modal_cart.js"></script>

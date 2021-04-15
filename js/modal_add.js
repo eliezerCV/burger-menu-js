@@ -23,10 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerPriceTotalModalAdd.innerHTML = "$" + (selectedBurger.quantity * selectedBurger.price).toFixed(2);
     }
 
-    function onAddToCart() {
-        addProduct();
-    }
-
     function onBuy() {
 
     }
