@@ -14,6 +14,7 @@ var btnAddQuantityModalAdd = document.querySelector("#add_quantity_modal_add");
 var btnBuyProd = document.querySelector("#btn_buy_prod");
 var btnAddToCart = document.querySelector("#btn_add_cart");
 
+var orderListCart = document.querySelector("#list_orders_modal_cart");
 var cartQuantityElem = document.querySelector("#cart_quantity");
 var burgersListElem = document.querySelector("#list_burgers");
 var maskElem = document.querySelector("#mask");
@@ -39,9 +40,17 @@ function hideModalAdd() {
     modalAdd.style.display = 'none';
 }
 
+function showModalCart() {
+    
+}
+
+function hideModalCart() {
+    
+}
+
 /**SERVICE TO HAND THE LOCALSTORAGE */
 function getOrders() {
-    let currentOrders = localStorage.getItem('orders');
+    let currentOrders = JSON.parse(localStorage.getItem('orders'));
     return currentOrders;
 }
 
