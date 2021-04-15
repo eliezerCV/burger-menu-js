@@ -28,3 +28,6 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #00000050;
     transition: all ease 0.5s;
 }
+.show {
+    display: block;
+}
