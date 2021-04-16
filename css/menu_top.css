@@ -26,11 +26,14 @@
 .item-added {
     animation: cart_elem_added 0.3s;
 }
-
 @keyframes cart_elem_added {
     0% { transform: scale(1) }
     25% { transform: scale(2) }
     50% { transform: scale(3) }
     75% { transform: scale(2) }
     100% { transform: scale(1) }
+}
+@media(min-width: 1000px) {
+    #menu_top .logo {margin-left: 3rem;}
+    #menu_top .cart-logo {margin-right: 3rem;}   
 }
