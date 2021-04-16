@@ -17,6 +17,7 @@ var btnShowCart = document.querySelector("#cart_logo");
 var btnDeleteAllFromCart = document.querySelector("#delete_all_cart");
 var btnCloseCart = document.querySelector("#btn_close_cart");
 var btnOkSuccess = document.querySelector("#btn_ok_success");
+var btnSaveOrder = document.querySelector("#btn_save_order");
 
 var totalCartElem = document.querySelector("#total_cart");
 var noItemsInCartElem = document.querySelector("#no_items_cart");
@@ -24,23 +25,27 @@ var orderListCart = document.querySelector("#list_orders_modal_cart");
 var cartQuantityElem = document.querySelector("#cart_quantity");
 var burgersListElem = document.querySelector("#list_burgers");
 var maskElem = document.querySelector("#mask");
+var totalOrdersElem = document.querySelector("#total_orders");
 var quantityModalAddElem = document.querySelector("#quantity_modal_add");
 var burgerPriceTotalModalAdd = document.querySelector("#burger_price_total");
 var modalAdd = document.querySelector("#modal_add");
 var modalCart = document.querySelector("#modal_cart");
+var modalSuccess = document.querySelector("#modal_order_recived");
 
 maskElem.addEventListener("click", closeModals);
+btnOkSuccess.addEventListener("click", hideModalSuccess);
 
 function closeModals() {
     hideModalAdd();
     hideModalCart();
-    showMask();
+    hideModalSuccess();
 }
 
 function showMask() {
-    showingModal = !showingModal;
-
-    (showingModal) ? maskElem.style.display = "block" : maskElem.style.display = "none";
+    maskElem.style.display = "block";
+}
+function hideMask() {
+    maskElem.style.display = "none";
 }
 
 function showModalAdd(prodIndex) {
@@ -51,8 +56,18 @@ function showModalAdd(prodIndex) {
 }
 function hideModalAdd() {
     selectedBurger = {};
-    showMask();
+    hideMask();
     modalAdd.style.display = 'none';
+}
+
+function showModalSuccess() {
+    showMask();
+    modalSuccess.classList.add("show-success");
+}
+function hideModalSuccess() {
+    hideMask();
+    deleteAllFromCart();
+    modalSuccess.classList.remove("show-success");
 }
 
 function showModalCart() {
@@ -62,7 +77,7 @@ function showModalCart() {
 }
 
 function hideModalCart() {
-    showMask();
+    hideMask();
     showingCart = false;
     modalCart.style.left = "120%";
 }
@@ -99,8 +114,9 @@ function editOrders(order, index) {
 }
 
 function deleteAllFromCart() { 
-    localStorage.clear(); 
-    hideModalCart()
+    localStorage.clear();
+    hideModalCart();
+    getQuantity();
 }
 
 function deleteOrder(index) {
@@ -111,6 +127,7 @@ function deleteOrder(index) {
         return;
     }
     localStorage.setItem('orders', JSON.stringify(currentOrders));
+    getQuantity();
 }
 
 function getProductsQuantityInCart() {

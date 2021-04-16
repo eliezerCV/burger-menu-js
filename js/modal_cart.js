@@ -3,10 +3,15 @@ var totalCart = 0;
 
 btnCloseCart.addEventListener("click", hideModalCart);
 btnDeleteAllFromCart.addEventListener("click", deleteAll);
+btnSaveOrder.addEventListener("click", onSaveOrder);
+
+function onSaveOrder() {
+    deleteAllFromCart();
+    showModalSuccess();    
+}
 
 function deleteAll() {
     deleteAllFromCart();
-    getQuantity();
     renderOrders();
 }
 
@@ -26,7 +31,6 @@ function onAddQuantityCart(index) {
 
 function onRemove(index) {
     deleteOrder(index);
-    getQuantity();
     renderOrders();
 }
 
@@ -38,8 +42,11 @@ function renderOrders() {
         totalCart = 0;
         totalCartElem.innerHTML = "$" + totalCart.toFixed(2);
         btnDeleteAllFromCart.style.display = "none";
+        totalOrdersElem.style.display = 'none';
         return;
     }
+    no_items_cart.style.display = 'none';
+    totalOrdersElem.style.display = 'block';
     btnDeleteAllFromCart.style.display = "block";
     cartOrders.forEach((order, i) => {
         let total = (order.price*order.quantity).toFixed(2);

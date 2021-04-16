@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnAddQuantityModalAdd.addEventListener("click", onAddQuantity);
     btnSubQuantityModalAdd.addEventListener("click", onSubQuantity);
     btnAddToCart.addEventListener("click", addProduct);
-    btnBuyProd.addEventListener("click", addProduct);
+    btnBuyProd.addEventListener("click", onBuy);
 
     function onAddQuantity() {
         selectedBurger.quantity++;
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function onBuy() {
-
+        hideModalAdd();
+        showModalSuccess();
     }
 })

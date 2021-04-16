@@ -1,5 +1,5 @@
 #modal_order_recived {
-    display: block;
+    transform: scale(0);
     position: fixed;
     top: 15%;
     left: 5%;
@@ -8,6 +8,10 @@
     border-radius: 10px;
     box-shadow: 0 0 2px 2px #cccccc;
     z-index: 2;
+    transition: all ease 0.3s;
+}
+.show-success {
+    transform: scale(1) !important;
 }
 .success-header {
     width: 100%;

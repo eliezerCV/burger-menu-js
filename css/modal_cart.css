@@ -13,7 +13,7 @@
 }
 .no-items-cart {
     display: none;
-    margin-top: 20px;
+    margin: 20px 0;
     color: var(--secondary);
     font-weight: 600;
     text-align: center;
