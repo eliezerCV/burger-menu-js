@@ -43,9 +43,15 @@ function closeModals() {
 
 function showMask() {
     maskElem.style.display = "block";
+    setTimeout(() => {
+        maskElem.classList.add("show");
+    }, 50);
 }
 function hideMask() {
-    maskElem.style.display = "none";
+    maskElem.classList.remove("show");
+    setTimeout(() => {
+        maskElem.style.display = "none";
+    }, 100);
 }
 
 function showModalAdd(prodIndex) {
