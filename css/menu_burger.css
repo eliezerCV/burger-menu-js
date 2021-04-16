@@ -9,6 +9,7 @@
 .list-burgers {
     display: flex;
     flex-wrap: wrap;   
+    justify-content: center;
 }
 .burger {
     width: 500px;
@@ -44,4 +45,14 @@
     position: relative;
     top: -20px;
     text-align: center;
+}
+@media(min-width: 1000px) {
+    .burger {
+        width: 400px;
+    }
+}
+@media(min-width: 1366px) {
+    .burger {
+        width: 500px;
+    }
 }
