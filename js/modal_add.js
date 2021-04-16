@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function onBuy() {
         hideModalAdd();
+        deleteAllFromCart();
         showModalSuccess();
     }
 })

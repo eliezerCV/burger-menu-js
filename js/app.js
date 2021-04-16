@@ -49,21 +49,19 @@ function showMask() {
 }
 function hideMask() {
     maskElem.classList.remove("show");
-    setTimeout(() => {
-        maskElem.style.display = "none";
-    }, 100);
+    maskElem.style.display = "none";
 }
 
 function showModalAdd(prodIndex) {
     selectedBurger = burgers[prodIndex];
 
     showMask();
-    modalAdd.style.display = 'block';
+    modalAdd.classList.add("show-add");
 }
 function hideModalAdd() {
     selectedBurger = {};
     hideMask();
-    modalAdd.style.display = 'none';
+    modalAdd.classList.remove("show-add");
 }
 
 function showModalSuccess() {
@@ -72,7 +70,6 @@ function showModalSuccess() {
 }
 function hideModalSuccess() {
     hideMask();
-    deleteAllFromCart();
     modalSuccess.classList.remove("show-success");
 }
 
@@ -84,7 +81,6 @@ function showModalCart() {
 
 function hideModalCart() {
     hideMask();
-    showingCart = false;
     modalCart.style.left = "120%";
 }
 
