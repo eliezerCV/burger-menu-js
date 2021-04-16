@@ -75,13 +75,13 @@ function hideModalSuccess() {
 
 function showModalCart() {
     showMask();
-    modalCart.style.left = "20%";
+    modalCart.classList.add("show-cart");
     renderOrders();
 }
 
 function hideModalCart() {
     hideMask();
-    modalCart.style.left = "120%";
+    modalCart.classList.remove("show-cart");
 }
 
 /**SERVICE TO HAND THE LOCALSTORAGE */
