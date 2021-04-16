@@ -20,6 +20,7 @@ var btnOkSuccess = document.querySelector("#btn_ok_success");
 var btnSaveOrder = document.querySelector("#btn_save_order");
 
 var totalCartElem = document.querySelector("#total_cart");
+var burgerNameElem = document.querySelector("#burger_name");
 var noItemsInCartElem = document.querySelector("#no_items_cart");
 var orderListCart = document.querySelector("#list_orders_modal_cart");
 var cartQuantityElem = document.querySelector("#cart_quantity");
@@ -52,11 +53,11 @@ function hideMask() {
     maskElem.style.display = "none";
 }
 
-function showModalAdd(prodIndex) {
-    selectedBurger = burgers[prodIndex];
-
+function showModalAdd(index) {
+    selectedBurger = {...burgers[index]};
     showMask();
     modalAdd.classList.add("show-add");
+    initUI();
 }
 function hideModalAdd() {
     selectedBurger = {};

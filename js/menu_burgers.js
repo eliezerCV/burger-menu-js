@@ -1,4 +1,3 @@
-
 function onAddProdToCart(index) {    
     showModalAdd(index);
 }
