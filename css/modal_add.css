@@ -63,7 +63,18 @@
     border: solid 2px var(--secondary) !important;
     font-weight: 600;
 }
-
+@media(min-width: 500px) {
+    #modal_add {
+        left: 25%;
+        width: 50%;
+    }
+}
+@media(min-width: 1000px) {
+    #modal_add {
+        left: 35%;
+        width: 30%;
+    }
+}
 
 
 

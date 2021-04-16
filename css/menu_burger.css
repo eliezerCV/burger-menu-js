@@ -46,6 +46,8 @@
     top: -20px;
     text-align: center;
 }
+.actions i {transition: all ease 0.2s;}
+.actions i:hover {cursor: pointer; color: var(--secondary) !important;}
 @media(min-width: 1000px) {
     .burger {
         width: 400px;
@@ -54,5 +56,10 @@
 @media(min-width: 1366px) {
     .burger {
         width: 500px;
+    }
+}
+@media(min-width: 1500px) {
+    .burger {
+        width: 600px;
     }
 }
