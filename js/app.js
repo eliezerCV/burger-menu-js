@@ -103,6 +103,7 @@ function addProduct() {
         currentOrders.forEach(order => newOrders.push(order))
     } else newOrders.push(selectedBurger)
 
+
     localStorage.setItem('orders', JSON.stringify(newOrders));
     selectedBurger = {}
     getQuantity();
