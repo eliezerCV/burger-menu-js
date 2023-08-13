@@ -12,6 +12,7 @@ html, body {
     --secondary: #007580;
     --dark: #282846;
     --light: #d8ebe4;
+    --white: #ffffff;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

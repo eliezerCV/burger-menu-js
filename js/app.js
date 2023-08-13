@@ -138,20 +138,3 @@ function getProductsQuantityInCart() {
     let currentOrders = JSON.parse(localStorage.getItem('orders'));
     return currentOrders ? currentOrders.length : 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
